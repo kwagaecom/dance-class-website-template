@@ -362,21 +362,65 @@ footer{
     <iframe id="video"  width="560" height="315" src="https://www.youtube.com/embed/ImENrnmLUNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
     </iframe>
   </div>
-<div id="genre-container">
-    <h2>Learn New Moves From Our Dance Instructors!</h2>
-      <div id="genres">
-        <div class="genre">
-          <img id="ballet-img" src="https://media.npr.org/assets/img/2021/01/15/dwc-ambassadors-20-21-sept.-2020-129-1-3f9e6657bbaf9df68f117d9e3ef83f54734328b7.jpg" alt="A woman practicing ballet"><br><p align="center">Ballet</p>
-        </div>
-        <div class="genre">
-          <img id="salsa-img" src="https://taagme.com/wp-content/uploads/2018/10/salsa-dance-1024x835.jpg" alt="A couple doing the salsa"><br><p p align="center">Salsa</p>
-        </div>
-        <div class="genre">
-          <img id="hiphop-img" src="https://dance-teacher.com/wp-content/uploads/2020/12/erik-saradpon-on-what-it-takes-to-teach-hip-hop-3.jpg" alt="An instructor teaches a hip hop class"><br><p p align="center">Hip-Hop</p>
-        </div>
-      </div>
-  </div>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #genre-container {
+            text-align: center;
+            padding: 20px;
+        }
+        #genres {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .genre {
+            margin: 10px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .genre img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .genre p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .genre {
+                width: 150px;
+            }
+        }
+        @media (max-width: 480px) {
+            .genre {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 
+    <div id="genre-container">
+        <h2>Learn New Moves From Our Dance Instructors!</h2>
+        <div id="genres">
+            <div class="genre">
+                <img id="ballet-img" src="https://media.npr.org/assets/img/2021/01/15/dwc-ambassadors-20-21-sept.-2020-129-1-3f9e6657bbaf9df68f117d9e3ef83f54734328b7.jpg" alt="A woman practicing ballet">
+                <p>Ballet</p>
+            </div>
+            <div class="genre">
+                <img id="salsa-img" src="https://taagme.com/wp-content/uploads/2018/10/salsa-dance-1024x835.jpg" alt="A couple doing the salsa">
+                <p>Salsa</p>
+            </div>
+            <div class="genre">
+                <img id="hiphop-img" src="https://dance-teacher.com/wp-content/uploads/2020/12/erik-saradpon-on-what-it-takes-to-teach-hip-hop-3.jpg" alt="An instructor teaches a hip hop class">
+                <p>Hip-Hop</p>
+            </div>
+        </div>
+    </div>
 
         <!-- Banner Start -->
         <div class="container-fluid bg-secondary wow zoomInDown" data-wow-delay="0.1s">
