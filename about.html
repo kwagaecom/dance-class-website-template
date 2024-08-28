@@ -128,40 +128,61 @@ html, body {
     background-color: #fff;
 }
 
-.row {
-    margin: 0;
-}
-
 .container {
     margin: 0;
     padding: 0;
-    background-color: rgba(233, 150, 122, 0.2);
-    background-color: white;
-    overflow-y: auto;
     width: 100%;
     max-width: 100%;
-}
-
-.about-panel-wrapper {
-    position: relative;
-    width: 100%;
+    background-color: white;
+    overflow-y: auto;
 }
 
 .about-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
-    padding: 0;
-    position: relative;
-    height: auto;
+    padding: 20px;
+    background-color: rgba(233, 150, 122, 0.2);
     animation: example 1.2s both ease-in;
 }
 
-.photo-about {
-    position: relative;
+.about-content {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    color: #4A4A4A;
+}
+
+.about-content h1 {
+    color: #6A6A6A;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 36px;
+    font-weight: 200;
+    margin: 10px auto;
+}
+
+.about-me {
+    margin: 3% auto;
+    text-align: justify;
+    font-weight: 300;
     width: 100%;
+}
+
+.about-me p, .about-me blockquote {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.07em;
+}
+
+.photo-about {
+    flex: 1;
+    width: 100%;
+    max-width: 50%;
     height: auto;
     background: url("https://plus.unsplash.com/premium_photo-1698169828345-ba0185d4de53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFuY2UlMjBhYm91dCUyMHVzJTIwYmFja2dycG91bmR8ZW58MHx8MHx8fDA%3D") no-repeat center center;
     background-size: cover;
-    z-index: 45;
 }
 
 .hide-photo-filter {
@@ -174,7 +195,6 @@ html, body {
 }
 
 .about-info {
-    font-family: "Montserrat";
     position: absolute;
     z-index: 100100;
     top: 50%;
@@ -211,44 +231,23 @@ html, body {
     margin: 10px 0 0 0;
 }
 
-.about-content {
-    float: left;
-    padding-top: 30px;
-    background: white;
-    color: #4A4A4A;
-    width: 50%;
-}
-
-.about-content h1 {
-    color: #6A6A6A;
-    text-align: center;
-    line-height: 90px;
-    font-size: 90px;
-    font-weight: 200;
-    letter-spacing: -0.1em;
-    margin: 10px auto;
-}
-
-.about-me {
-    margin: 3% auto;
-    text-align: justify;
-    font-weight: 300;
-    width: 63%;
-}
-
-.about-me p, .about-me blockquote {
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: 0.07em;
-}
-
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 768px) {
-    .about-content, .about-panel {
+    .about-panel {
+        flex-direction: column;
+    }
+
+    .photo-about {
         width: 100%;
         max-width: 100%;
+        height: 200px; /* Adjust height as needed */
     }
-    
+
+    .about-content {
+        width: 100%;
+        padding: 10px;
+    }
+
     .about-info-name {
         font-size: 5vw;
     }
@@ -266,13 +265,10 @@ html, body {
     }
 
     .about-content h1 {
-        font-size: 14vw;
-    }
-
-    .photo-about {
-        height: 60vh;
+        font-size: 6vw;
     }
 }
+
 </style>
 
 
