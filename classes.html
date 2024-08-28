@@ -116,31 +116,49 @@
 
         <!-- Header Start -->
        
-      <style>
+<style>
     .banner {
-    margin-top: 60px;
- margin-left: 10px;
-margin-right: 10px;
-    width: 100%;
-}
+        margin-top: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Adjusts the spacing between images */
+    }
 
+    .banner img {
+        flex: 1 1 calc(33.333% - 10px); /* Makes each image take up one-third of the row on larger screens */
+        max-width: 100%;
+        height: auto;
+        object-fit: cover; /* Adjusts the image to cover the allocated space */
+        border-radius: 10px; /* Adds rounded corners to the images */
+    }
 
-.banner img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain; /* or 'cover', depending on your needs */
-}
+    /* Medium screens (Tablets) */
+    @media (max-width: 768px) {
+        .banner img {
+            flex: 1 1 calc(50% - 10px); /* Makes each image take up half the row on medium screens */
+        }
+    }
 
-  </style>
-    <section class="banner">
-        <img src="https://media.tenor.com/KTMn52qSKUwAAAAM/ritus-dance-studio-bollywood-dance.gif" alt="Banner Image">
- <img src="https://media.tenor.com/_KKcOWEohWsAAAAM/ritus-dance-studio-hip-hop-dancers.gif" alt="Banner Image">
-   <img src="https://media.tenor.com/Pf72p2CmC-sAAAAM/ritus-dance-studio-body-roll.gif" alt="Banner Image">
- <img src="https://media.tenor.com/zZacKYedTW4AAAAM/ritus-dance-studio.gif" alt="Banner Image">
+    /* Small screens (Mobile) */
+    @media (max-width: 480px) {
+        .banner img {
+            flex: 1 1 100%; /* Stacks images vertically on small screens */
+        }
+    }
+</style>
 
-        <img src="https://media.tenor.com/kplgjyGqWKAAAAAM/ritus-dance-studio-dance-squad.gif" alt="Banner Image">
-        <img src="https://media.tenor.com/KTMn52qSKUwAAAAM/ritus-dance-studio-bollywood-dance.gif" alt="Banner Image">
-    </section>
+<section class="banner">
+    <img src="https://media.tenor.com/KTMn52qSKUwAAAAM/ritus-dance-studio-bollywood-dance.gif" alt="Banner Image">
+    <img src="https://media.tenor.com/_KKcOWEohWsAAAAM/ritus-dance-studio-hip-hop-dancers.gif" alt="Banner Image">
+    <img src="https://media.tenor.com/Pf72p2CmC-sAAAAM/ritus-dance-studio-body-roll.gif" alt="Banner Image">
+    <img src="https://media.tenor.com/zZacKYedTW4AAAAM/ritus-dance-studio.gif" alt="Banner Image">
+    <img src="https://media.tenor.com/kplgjyGqWKAAAAAM/ritus-dance-studio-dance-squad.gif" alt="Banner Image">
+    <img src="https://media.tenor.com/KTMn52qSKUwAAAAM/ritus-dance-studio-bollywood-dance.gif" alt="Banner Image">
+</section>
+
         <!-- Header End -->
 
         <!-- Banner Start -->
